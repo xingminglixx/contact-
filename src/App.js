@@ -9,7 +9,7 @@ import Contact from './components/ContactLook'
 function App() {
 
 const [contact,setCotact]=useState({})
-
+const [totalContact, setTotalContact]=useState([])
 
 
   return (
@@ -19,7 +19,7 @@ const [contact,setCotact]=useState({})
     <Nav/>
     <Switch>
 <Route path="/"  exact><Appointment /></Route>
-<Route path="/contact"> <Contact contact={contact} setContact={setCotact}/></Route>
+<Route path="/contact"> <Contact contact={contact} totalContact={totalContact} setTotalContact={setTotalContact} setContact={setCotact}/></Route>
 
 </Switch>
 </Router>
